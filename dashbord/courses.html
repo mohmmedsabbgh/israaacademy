@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الدورات</title>
+  <!-- Link Css Owl Carousel -->
+  <link rel="stylesheet" href="../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <!-- Link Css Bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- Link Css Fontawesome -->
+  <link rel="stylesheet" href="../css/all.min.css">
+  <!-- Link Css Edit Me -->
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Anmation Js cdn -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <style>
+    body {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Start Code Dashbord -->
+  <div class="dashbord">
+    <!-- Start Code Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">أكاديمية الإسراء</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="../image/user2.png" class="img-fluid" width="30" alt="">
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../index.html">موقع الأكاديمية</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">تسجيل خروج </a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="بحث" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Finsh Code Navbar -->
+    <div class="row">
+      <div class="col-lg-2 bg-danger pt-3">
+        <div class="d-flex align-items-center text-white gap-1 justify-content-center">
+          <span><i class="fa-solid fa-gauge"></i></span>
+          <h5 class="m-0">لوحة التحكم</h5>
+        </div>
+        <hr>
+        <div class="listmenue">
+          <ul>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-chart-line"></i></span>
+                <a href="index.html">الرئيسية</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-users"></i></span>
+                <a href="users.html">المستخدمين</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-person"></i></span>
+                <a href="lecturer.html">المحاضرون</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-book"></i></span>
+                <a href="courses.html">الدورات</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-file-signature"></i></span>
+                <a href="courses _registration.html">الدورات المسجلة</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-receipt"></i></span>
+                <a href="">الشهادات التخصصية</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-brands fa-facebook-messenger"></i></span>
+                <a href="messagehelp.html">الرسائل الواردة</a>
+              </div>
+            </li>
+            <li>
+              <div>
+                <details class="text-white">
+                  <summary>الإعدادات</summary>
+                  <summary>
+                    <div>
+                      <a href="landing.html">الرئيسية</a>
+                    </div>
+                  </summary>
+                  <summary>
+                    <div>
+                      <a href="about.html">عن الأكاديمية</a>
+                    </div>
+                  </summary>
+                </details>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span><i class="fa-solid fa-right-from-bracket"></i></span>
+                <a href="">تسجيل الخروج</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-10 cardsdash  ">
+        <div class="Title_btn d-flex justify-content-between p-3 align-items-center">
+          <h2>الــــــــدورات</h2>
+          <button class="btn btn-danger" id="alert">إضافة دورة</button>
+        </div>
+        <div class="table">
+          <table id="customers">
+            <tr>
+              <th>#</th>
+              <th>إسم الدورة</th>
+              <th>صورة الدورة</th>
+              <th>صورة المحاضر</th>
+              <th>إسم المحاضر</th>
+              <th>تاريخ الإضافة</th>
+              <th>الإجرائات</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+
+                        <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>1</td>
+              <td>علم إجتماع</td>
+              <td><img src="../image/3.jpg" width="100" alt=""></td>
+              <td><img src="../image/user2.png" class="img-fluid" width="50" alt=""></td>
+              <td>محمد الصباغ</td>
+              <td>6/4/2023</td>
+              <td>
+                <div class="d-flex justify-content-center align-items-center gap-3">
+                  <button id="popubdate"><i class="fa-solid fa-user-pen text-success fs-5" id=""></i></button>
+                  <i class="fa-solid fa-trash-can text-danger fs-5"></i>
+                </div>
+              </td>
+            </tr>
+            
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ====================================       ADD USER         ==================================== -->
+  <div class="poupup userPoupup" id="popupalert">
+    <div class="form">
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="mb-0 d-flex flex-column justify-content-center align-items-center " id="close">
+          <i class="fa-solid fa-circle-xmark text-danger fs-2" id=""></i>
+          <p>إضافة دورة جديدة</p>
+        </div>
+        <div class="">
+          <div class="">
+            <label for="namecourse"><span>*</span>إسم الدورة  </label>
+            <input type="text" name="" id="namecourse" placeholder="إسم الدورة" required>
+          </div>
+          <div class="">
+            <p><span>*</span>صورة الدورة  </p>
+            <label for="photocourse" class="border"><span>*</span>إضغط لإضافة صورة الدورة </label>
+            <input type="file" name="" id="photocourse" class="d-none">
+          </div>
+        </div>
+        <div>
+          <div class="">
+            <p><span>*</span>صورة المحاضر  </p>
+            <label for="phototet" class="border"><span>*</span>إضغط لإضافة صورة المحاضر </label>
+            <input type="file" name="" id="phototet" class="d-none">
+          </div>
+          <div class="">
+            <p for=""><span>*</span>إسم المحاضر </p>
+            <select name="" id="" class="p-1 border" style="border-radius: 50px;">
+              <option value="">--  إسم المحاضر --</option>
+              <option value="">محمد حمدي الصباغ</option>
+              <option value="">شيماء أبو عودة</option>
+              <option value="">محمد أبو عمرة</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <p for=""><span>*</span>تاريخ الإضافة</p>
+            <input type="date" value="2018-07-22" name="" id="">
+          </div>
+          <div>
+            <p>لا تنسى التأكد من صحة البيانات</p>
+          <button class="btn btn-success" name="">إضافة</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- ====================================       UBDATE USER       ==================================== -->
+
+  <div class="poupup updateuser" id="poupubapdeate">
+    <div class="form">
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="mb-0 d-flex flex-column justify-content-center align-items-center " id="closepop">
+          <i class="fa-solid fa-circle-xmark text-danger fs-2" id=""></i>
+          <p>التعديل على المستخدم </p>
+        </div>
+        <div class="">
+          <div class="">
+            <label for="namecourse"><span>*</span>إسم الدورة  </label>
+            <input type="text" name="" id="namecourse" placeholder="إسم الدورة" required>
+          </div>
+          <div class="">
+            <p><span>*</span>صورة الدورة  </p>
+            <label for="photocourse" class="border"><span>*</span>إضغط لإضافة صورة الدورة </label>
+            <input type="file" name="" id="photocourse" class="d-none">
+          </div>
+        </div>
+        <div>
+          <div class="">
+            <p><span>*</span>صورة المحاضر  </p>
+            <label for="phototet" class="border"><span>*</span>إضغط لإضافة صورة المحاضر </label>
+            <input type="file" name="" id="phototet" class="d-none">
+          </div>
+          <div class="">
+            <p for=""><span>*</span>إسم المحاضر </p>
+            <select name="" id="" class="p-1 border" style="border-radius: 50px;">
+              <option value="">--  إسم المحاضر --</option>
+              <option value="">محمد حمدي الصباغ</option>
+              <option value="">شيماء أبو عودة</option>
+              <option value="">محمد أبو عمرة</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div>
+            <p for=""><span>*</span>تاريخ الإضافة</p>
+            <input type="date" value="2018-07-22" name="" id="">
+          </div>
+          <div>
+            <p>لا تنسى التأكد من صحة البيانات</p>
+            <button class="btn btn-success" name="">حفظ التعديل</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Script jquery  -->
+  <script src="../js/jquery-3.7.0.js"></script>
+  <!-- Script Css Owl Carousel -->
+  <script src="../js/owl.carousel.min.js"></script>
+  <!-- Script  Bootstrap -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <!-- Script Fontawesome -->
+  <script src="../js/all.min.js"></script>
+  <!-- Script Edit My -->
+  <script src="../js/main.js"></script>
+  <!-- Code injected by live-server -->
+</body>
+
+</html>

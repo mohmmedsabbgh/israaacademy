@@ -1,0 +1,690 @@
+* {
+    direction: rtl;
+    font-family: 'Tajawal', sans-serif;
+}
+
+:root {
+    --white-color: #FFFFFF;
+    --black-color: #000;
+    --selver-color: #ccc;
+    --darkred-color: #761C33;
+    --whitelight-color: #E6D6DA;
+    --text-p: #A89CA0;
+    --bac-btn: #ecebeb;
+}
+
+input {
+    outline: none;
+    border-radius: 50px;
+    border: 0.5px solid var(--selver-color);
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../webfonts/Tajawal-Black.ttf');
+    src: url('../webfonts/Tajawal-Bold.ttf'),
+        url('../webfonts/Tajawal-ExtraBold.ttf'),
+        url('../webfonts/Tajawal-ExtraLight.ttf'),
+        url('../webfonts/Tajawal-Light.ttf'),
+        url('../webfonts/Tajawal-Medium.ttf')
+}
+
+/* Start Style Navbar */
+.navbar {
+    background-color: var(--white-color);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--darkred-color);
+
+}
+
+.navbar form input[type="search"] {
+    border-left: none;
+    border-right: none;
+    position: relative;
+    right: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 5px;
+}
+
+.navbar form button {
+    background-color: var(--darkred-color);
+    color: var(--white-color);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    width: 80px;
+}
+
+/* Finsh Style Navbar */
+/* Start Style Slider */
+.SLIDERONE .item {
+    position: relative;
+}
+
+.SLIDERONE .item .content {
+    width: 100%;
+    height: 100%;
+    background: #000000a4;
+    color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SLIDERONE .item img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+}
+
+/* Finsh Start Slider */
+
+
+/* Start Style What */
+.what .container {
+    overflow: hidden;
+    position: relative;
+    bottom: 50px;
+    z-index: 1;
+    background-color: var(--whitelight-color);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.what .conterntText {
+    padding: 10px;
+}
+
+.what .conterntText svg {
+    font-size: 100px !important;
+    color: var(--darkred-color);
+}
+
+.what .conterntText img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.what .conterntText p {
+    color: var(--text-p);
+    line-height: 30px;
+}
+
+/* Finsh Style What */
+
+/* Start Style sliderTow */
+
+.sliderTow .owl-nav {
+    position: absolute;
+    top: -10%;
+    left: 0;
+}
+
+.sliderTow .owl-nav button {
+    width: 30px;
+    height: 30px;
+    border-radius: 8% !important;
+    background-color: var(--selver-color) !important;
+}
+
+.sliderTow .owl-nav button:hover {
+    border: 1px solid var(--darkred-color) !important;
+}
+
+.sliderTow .owl-nav button svg {
+    color: var(--black-color) !important;
+}
+
+@media(max-width:500px) {
+    .sliderTow .owl-nav {
+        position: absolute;
+        top: -13% !important;
+        left: 0;
+    }
+
+    .sliderTow .owl-nav button {
+        width: 20px;
+        height: 20px;
+        padding: 51px;
+        border-radius: 50% !important;
+
+
+    }
+
+    .sliderTow .owl-nav button svg {
+        color: var(--black-color) !important;
+    }
+}
+
+.sliderTow .card:hover {
+    transition: 0.3s ease-in-out;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: inset 0 0 20px var(--text-p);
+}
+
+.sliderTow .card .photocard {
+    gap: 20px;
+    align-items: center;
+}
+
+.sliderTow .card .photocard img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sliderTow .card .addbtn {
+    border-radius: 50px;
+    border: none;
+    color: var(--darkred-color);
+    background-color: var(--bac-btn);
+    transition: 0.5s ease-in-out !important;
+}
+
+.sliderTow .card .addbtn:hover {
+    border: 1px solid var(--darkred-color);
+}
+
+/* Finsh Style sliderTow */
+
+/* Start style AcountSection */
+.AcountSection {
+    background: linear-gradient(#00000080, #00000080), url(../image/bacground.jpeg);
+    color: var(--white-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Finsh style AcountSection */
+
+/* Start Style Complet */
+.complet {
+    margin-top: 50px;
+    background-color: var(--whitelight-color);
+}
+
+.complet .photoComplet img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.complet .photoComplet img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 5px var(--darkred-color);
+}
+
+.complet .links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.complet .links .addbtnlink {
+    background-color: var(--darkred-color);
+    color: var(--white-color);
+    border-radius: 30px;
+}
+
+/* Finsh Style Complet  */
+
+/* Start Style Lecturers */
+.Lecturers .owl-nav {
+    position: absolute;
+    top: -25% !important;
+    left: 0;
+}
+
+.Lecturers img {
+    width: 150px !important;
+    margin: auto;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: fill;
+    margin-bottom: 10px;
+}
+
+.Lecturers p {
+    color: var(--text-p);
+}
+
+/* Finsh Style Lecturers */
+
+/* Start Style joining */
+.joining {
+    background-color: var(--darkred-color);
+    color: var(--white-color);
+}
+
+.joining form input {
+    background-color: transparent;
+    border: 1px solid var(--whitelight-color);
+    color: var(--white-color);
+    width: 30%;
+    padding: 5px;
+}
+
+.joining form input::placeholder {
+    color: var(--whitelight-color);
+    font-size: 15px;
+}
+
+.joining form button {
+    background-color: var(--whitelight-color);
+    color: var(--darkred-color);
+    border-radius: 50px;
+    width: 8%;
+    padding: 5px;
+    border: none;
+}
+
+/* Finsh Style joining */
+
+/* Start Style Footer */
+.footer {
+    background-color: var(--bac-btn);
+    position: relative;
+    bottom: 0;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 20px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: var(--black-color);
+    transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover {
+    margin-right: 10px;
+}
+
+.footer iframe {
+
+    transition: 0.3s ease-in-out;
+}
+
+.footer iframe:hover {
+    border-radius: 20px;
+    border: 5px solid var(--darkred-color);
+}
+
+.copy {
+    background-color: var(--darkred-color);
+    color: var(--white-color);
+}
+
+/* Finsh Style Footer */
+
+/* Start Style Login Page */
+.loginPage {
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#00000097, #00000097), url(../image/2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.loginPage .container {
+    background-color: var(--white-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.loginPage .form div {
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.loginPage .form label span {
+    color: var(--darkred-color);
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.loginPage .form input {
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.loginPage .form input::placeholder {
+    font-size: 14px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+}
+
+.loginPage .form input:focus {
+    transition: 0.3s ease-in-out;
+    border: 2px solid var(--darkred-color);
+    box-shadow: 0 0 5px var(--darkred-color);
+}
+
+.loginPage .form button {
+    border-radius: 50px;
+    padding: 9px;
+    background-color: var(--darkred-color);
+    color: var(--white-color);
+    border: none;
+    width: 50%;
+    margin-bottom: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.loginPage .form button:hover {
+    opacity: 0.8;
+}
+
+.loginPage .form a {
+    text-decoration: none;
+    color: var(--text-p);
+}
+
+.loginPage .form a:hover {
+    color: var(--black-color);
+}
+
+.loginPage .photorejuster img {
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.loginPage .photorejuster img:hover {
+    filter: brightness(1.25);
+}
+
+@media (max-width:766px) {
+    .loginPage .photorejuster img {
+        display: none;
+    }
+}
+
+
+
+/* ============================      Start Style Page Joinspecialty      ================================== */
+.joun .form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.joun .form div input {
+    padding: 6px;
+}
+
+.joun .form div input:focus {
+    border: 1px solid var(--darkred-color);
+    box-shadow: 0 0 2px var(--darkred-color);
+}
+
+.joun .form div input::placeholder {
+    font-size: 13px;
+}
+
+.joun .form div select {
+    border-radius: 50px;
+    padding: 6px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--selver-color);
+}
+
+.joun .form div select:focus {
+    border: 1px solid var(--darkred-color);
+}
+
+.joun .form .addbtn {
+    border-radius: 50px;
+    border: none;
+    color: var(--white-color);
+    background-color: var(--darkred-color);
+    transition: 0.5s ease-in-out !important;
+}
+
+.joun .turn {
+    border: 1px solid var(--selver-color);
+    padding: 5px;
+    background-color: var(--bac-btn);
+    border-radius: 5px;
+}
+
+.joun .turn img {
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================      Start Style Dashbord      ================================== */
+.dashbord {
+    overflow-x: hidden;
+}
+
+.dashbord .listmenue {
+    min-height: calc(100vh - 100px);
+}
+
+@media(max-width:975px) {
+    .dashbord .listmenue {
+        min-height: auto;
+    }
+}
+
+.dashbord .listmenue ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.dashbord .listmenue div {
+    background-color: var(--darkred-color);
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.dashbord .listmenue div span {
+    color: var(--white-color);
+}
+
+.dashbord .listmenue div a {
+    text-decoration: none;
+    color: var(--white-color);
+    padding: 10px;
+}
+
+.dashbord .cardsdash .row>div>div {
+    background-color: var(--darkred-color);
+    padding: 10px;
+    color: var(--white-color);
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.dashbord .cardsdash .row>div>div svg {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: 100%;
+    height: 78vh;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+#customers {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    text-align: center !important;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--darkred-color);
+    color: white;
+}
+
+#customers button {
+    background-color: transparent;
+    border: none;
+}
+
+.poupup,
+.updateuser {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000a2;
+    width: 100%;
+    min-height: 100vh;
+    display: none;
+}
+
+.updateuser.active {
+    display: block;
+}
+
+.poupup.active {
+    display: block;
+}
+
+.poupup .form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.poupup .form form {
+    background-color: var(--white-color);
+    width: 40%;
+    border-radius: 10px;
+}
+
+.poupup .form form div {
+    padding: 10px;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.poupup .form form div div {
+    flex-direction: column;
+    width: 100%;
+}
+
+.poupup .form form div input {
+    padding: 5px;
+}
+
+.poupup .form form div input:focus {
+    border: 1px solid var(--darkred-color);
+    box-shadow: 0 0 1px var(--darkred-color);
+}
+
+.poupup .form form div label {
+    border-radius: 50px;
+    padding: 5px;
+}
+
+/* ==================================     Start Style Center Page    =====================================*/
+.centerHelp form div {
+    margin-bottom: 10px;
+}
+
+.centerHelp form div textarea {
+    resize: none;
+    border: 1px solid var(--selver-color);
+    border-radius: 30px;
+    min-height: 300px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.centerHelp form div input,
+.centerHelp form div textarea {
+    border: 1px solid var(--darkred-color);
+}
+
+.centerHelp form div input::placeholder {
+    font-size: 13px;
+}
+
+/* ==================================     Finsh Style Center Page    =====================================*/
+
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
